@@ -1,0 +1,253 @@
+:root {
+    /* Variables utileria */
+    --color-very-dark-magenta: hsl(300, 43%, 22%);
+    --color-soft-pink: hsl(333, 80%, 67%);
+    --color-dark-grayish-magenta: hsl(303, 10%, 53%);
+    --color-light-grayish-magenta: hsl(300, 24%, 96%);
+    --color-white: hsl(0, 0%, 100%);
+
+    --font-weight-normal: 400;
+    --font-weight-bold: 500;
+    --font-weight-bolder: 700;
+    --font-family-league-spartan: "League Spartan", sans-serif;
+
+    /* Variables semanticas */
+    --color-primary: var(--color-very-dark-magenta);
+    --color-secondary: var(--color-soft-pink);
+    --color-text: var(--color-dark-grayish-magenta);
+    --color-success: #198754;
+    --color-danger: #DC3545;
+    --color-warning: #FFC107;
+    --color-info: #0DCAF0;
+    --color-light: #FFF;
+    --color-dark: #000;
+
+    --bg: var(--color-light);
+    --color: var(--color-dark);
+
+    --fs-h1: 3rem;
+    --fs-h2: 2.25rem;
+    --fs-h3: 1.75rem;
+    --fs-h4: 1.5rem;
+    --fs-h5: 1.25rem;
+    --fs-h6: 1rem;
+    --fs-base: 1rem;
+    --fs-sm: 0.875rem;
+    --fs-xs: 0.75rem;
+}
+
+/* Tipografias */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+    color: var(--color);
+}
+
+h1,
+.h1 {
+    font-size: var(--fs-h1);
+    font-weight: var(--font-weight-bolder);
+}
+
+h2,
+.h2 {
+    font-size: var(--fs-h2);
+    font-weight: var(--font-weight-bolder);
+}
+
+h3,
+.h3 {
+    font-size: var(--fs-h3);
+    font-weight: var(--font-weight-bold);
+}
+
+h4,
+.h4 {
+    font-size: var(--fs-h4);
+    font-weight: var(--font-weight-bold);
+}
+
+h5,
+.h5 {
+    font-size: var(--fs-h5);
+    font-weight: var(--font-weight-normal);
+}
+
+h6,
+.h6 {
+    font-size: var(--fs-h6);
+    font-weight: var(--font-weight-normal);
+}
+
+p {
+    line-height: 1.5rem;
+    font-family: inherit;
+    color: var(--color);
+}
+
+/* Textos */
+.text-right {
+    text-align: right;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text__center {
+    text-align: center;
+}
+
+.text-justify {
+    text-align: justify;
+}
+
+.text-normal {
+    font-weight: var(--font-weight-normal);
+}
+
+.text-bold {
+    font-weight: var(--font-weight-bold);
+}
+
+.text-bolder {
+    font-weight: var(--font-weight-bolder);
+}
+
+/* Templates colors */
+.bg-primary {
+    --bg: var(--color-primary);
+}
+
+.bg-secondary {
+    --bg: var(--color-secondary);
+}
+
+.bg-color {
+    --bg: var(--color-text);
+}
+
+.bg-success {
+    --bg: var(--color-success);
+}
+
+.bg-danger {
+    --bg: var(--color-danger);
+}
+
+.bg-info {
+    --bg: var(--color-info);
+}
+
+.bg-light {
+    --bg: var(--color-light);
+}
+
+.bg-dark {
+    --bg: var(--color-dark);
+}
+
+.text-primary {
+    --color: var(--color-primary);
+}
+
+.text-secondary {
+    --color: var(--color-secondary);
+}
+
+.text-color {
+    --color: var(--color-text);
+}
+
+.text-success {
+    --color: var(--color-success);
+}
+
+.text-danger {
+    --color: var(--color-danger);
+}
+
+.text-info {
+    --color: var(--color-info);
+}
+
+.text-light {
+    --color: var(--color-light);
+}
+
+.text-dark {
+    --color: var(--color-dark);
+}
+
+/* Contenedores */
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 12px;
+    padding-left: 12px;
+    box-sizing: border-box;
+}
+
+/* Small (sm) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+/* Medium (md) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+/* Large (lg) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+/* Extra large (xl) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+/* Extra extra large (xxl) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1320px;
+    }
+}
+
+/* Secciones */
+.section {
+    background-color: var(--bg, var(--color-light));
+    color: var(--color, var(--color-dark));
+    padding-block: var(--section-padding, 2rem);
+
+    &.section--sm {
+        --section-padding: 1rem;
+    }
+
+    &.section--l {
+        --section-padding: 3rem;
+    }
+
+    &.section--xl {
+        --section-padding: 4rem;
+    }
+}
